@@ -1,0 +1,84 @@
+.zoomContainer {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  min-height: 80vh;
+}
+
+.zoomControlsContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  top: 0;
+  right: 20px;
+  z-index: 2;
+}
+
+.zoomInBtn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.zoomOutBtn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.zoomValue {
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.controlBtn {
+  border: none;
+  border-radius: 4px;
+  width: 60px;
+  height: 40px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.controlBtn:hover {
+  opacity: 1;
+}
+
+.controlBtn.upBtn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.controlBtn.downBtn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controlBtn.leftBtn {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.controlBtn.rightBtn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,167 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(90, 90, 87);
+}
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.itemBox {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.list li {
+  position: relative;
+}
+
+.tree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tree li::before,
+.tree li::after {
+  position: absolute;
+  top: -10px;
+  right: 50%;
+  width: calc(50% + 70px);
+  height: 5px;
+  content: "";
+  border-top: 1px solid #ccc;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  width: calc(50% + 70px);
+  content: "";
+}
+
+.tree li:first-child::before {
+  border: none;
+}
+
+.tree li:last-child::after {
+  border: none;
+}
+
+.tree ul::before {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 0;
+  height: 10px;
+  content: "";
+  border-left: 1px solid #ccc;
+}
+
+.tree > ul::before {
+  height: 0px;
+}
+
+.tree ul::after {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  width: 0;
+  height: 10px;
+  content: "";
+  border-left: 1px solid #ccc;
+}
+
+.tree ul.oneChild::after {
+  height: 10px;
+}
+
+.tree ul.notChild::after {
+  height: 0;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  border-radius: 4px;
+  width: 122px;
+  height: 20px;
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.btn {
+  width: 17px;
+  height: 17px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.rootBtn {
+  margin: 0 auto;
+  width: 130px;
+  padding: 13px;
+  background-color: orange;
+  border-radius: 3px;
+  color: white;
+  justify-content: space-between;
+}
+
+.boxBtn {
+  position: absolute;
+  right: -60px;
+  display: flex;
+  gap: 3px;
+}
+
+.boxBtn.boxSubmitBtn {
+  right: -40px;
+}
+
+.categoryName {
+  width: 120px;
+  height: 26px;
+  background-color: rgb(90, 87, 246);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
