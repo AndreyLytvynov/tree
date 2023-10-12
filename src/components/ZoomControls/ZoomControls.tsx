@@ -10,8 +10,8 @@ type ZoomControlsProps = {
 
 const ZoomControls: FC<ZoomControlsProps> = ({ children }) => {
   const [scale, setScale] = useState(1);
-  const [positionX, setPositionX] = useState(1);
-  const [positionY, setPositionY] = useState(100);
+  const [positionX, setPositionX] = useState(0);
+  const [positionY, setPositionY] = useState(0);
 
   const handleChangePosition = (direction: string) => {
     switch (direction.toLowerCase()) {
@@ -86,9 +86,7 @@ const ZoomControls: FC<ZoomControlsProps> = ({ children }) => {
             className={styles.zoomOutBtn}
           />
         </div>
-        <div style={zoomStyles} className={styles.test}>
-          {children}
-        </div>
+        <div style={zoomStyles}>{children}</div>
       </div>
     </section>
   );

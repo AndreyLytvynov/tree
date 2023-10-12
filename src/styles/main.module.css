@@ -79,7 +79,7 @@
   border-left: 1px solid #ccc;
 }
 
-.tree > ul::before {
+.tree > .draggable > ul::before {
   height: 0px;
 }
 

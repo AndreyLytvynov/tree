@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 
 import { Category } from "../../types";
 import styles from "../../styles/main.module.css";
+import Draggable from "../Draggable/Draggable";
 
 const TreeNode: FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -81,14 +82,16 @@ const TreeNode: FC = () => {
   return (
     <ZoomControls>
       <div className={styles.tree}>
-        <Button
-          onClick={addCategory}
-          label='Add categories'
-          className={styles.rootBtn}
-        >
-          <img src='/plus.svg' alt='arrow button' width={8} height={8} />
-        </Button>
-        {renderTree(categories)}
+        <Draggable>
+          <Button
+            onClick={addCategory}
+            label='Add categories'
+            className={styles.rootBtn}
+          >
+            <img src='/plus.svg' alt='arrow button' width={8} height={8} />
+          </Button>
+          {renderTree(categories)}
+        </Draggable>
       </div>
     </ZoomControls>
   );
